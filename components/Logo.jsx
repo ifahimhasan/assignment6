@@ -1,11 +1,19 @@
 import Link from "next/link";
 import { Dumbbell } from "lucide-react";
 
-export default function Logo({ className = "" }) {
+// Navbar: diagonal dumbbell. Footer: horizontal dumbbell (as in the Figma file).
+export default function Logo({ variant = "nav" }) {
+  const footer = variant === "footer";
   return (
-    <Link href="/" className={`inline-flex items-center gap-2 ${className}`} aria-label="FitLog home">
-      <Dumbbell className="size-5 -rotate-45 text-accent" strokeWidth={2.5} aria-hidden="true" />
-      <span className="font-display text-lg font-bold tracking-wide text-white">FITLOG</span>
+    <Link href="/" className="inline-flex items-center gap-2" aria-label="FitLog home">
+      <Dumbbell
+        className={`text-accent ${footer ? "size-4 rotate-45" : "size-5 rotate-90"}`}
+        strokeWidth={2.5}
+        aria-hidden="true"
+      />
+      <span className={`font-display font-bold tracking-wide text-white ${footer ? "text-sm" : "text-lg"}`}>
+        FITLOG
+      </span>
     </Link>
   );
 }

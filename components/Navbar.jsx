@@ -12,7 +12,7 @@ const LINKS = [
 
 function NavLinks({ pathname }) {
   return (
-    <ul className="flex items-center gap-1">
+    <ul className="flex items-center gap-2">
       {LINKS.map((link) => {
         const active = pathname === link.href;
         return (
@@ -20,10 +20,8 @@ function NavLinks({ pathname }) {
             <Link
               href={link.href}
               aria-current={active ? "page" : undefined}
-              className={`rounded-full px-4 py-1.5 text-sm transition-colors ${
-                active
-                  ? "bg-accent-deep font-medium text-accent ring-1 ring-accent/25"
-                  : "text-soft hover:text-white"
+              className={`block rounded-full px-4 py-1.5 text-[13px] transition-colors ${
+                active ? "bg-accent-deep font-medium text-accent" : "text-soft hover:text-white"
               }`}
             >
               {link.label}
@@ -35,45 +33,42 @@ function NavLinks({ pathname }) {
   );
 }
 
+function Badge({ label, count, filled }) {
+  return (
+    <Link
+      href="/my-plan"
+      aria-label={`${label}: ${count}`}
+      className="inline-flex items-center gap-2 text-xs text-soft transition-colors hover:text-white"
+    >
+      {label}
+      <span
+        className={`grid h-5 min-w-5 place-items-center rounded-full px-1 text-[10px] font-bold tabular-nums ${
+          filled ? "bg-accent text-black" : "border border-line-strong text-soft"
+        }`}
+      >
+        {count}
+      </span>
+    </Link>
+  );
+}
+
 export default function Navbar() {
   const pathname = usePathname();
   const { planCount, savedCount } = usePlan();
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-ink/85 backdrop-blur-md">
-      <nav className="mx-auto max-w-6xl px-4 sm:px-6" aria-label="Main">
-        <div className="grid h-16 grid-cols-[1fr_auto] items-center gap-4 md:grid-cols-[1fr_auto_1fr]">
+    <header className="sticky top-0 z-40 border-b border-line bg-ink/90 backdrop-blur-md">
+      <nav className="shell" aria-label="Main">
+        <div className="grid h-16 grid-cols-[1fr_auto] items-center gap-4 md:h-[72px] md:grid-cols-[1fr_auto_1fr]">
           <Logo />
-
           <div className="hidden md:block">
             <NavLinks pathname={pathname} />
           </div>
-
-          <div className="flex items-center justify-end gap-2">
-            <Link
-              href="/my-plan"
-              aria-label={`Today's plan: ${planCount} lifts`}
-              className="inline-flex items-center gap-2 rounded-full px-2.5 py-1 text-xs text-soft transition-colors hover:text-white"
-            >
-              Plan
-              <span className="grid h-5 min-w-5 place-items-center rounded-full bg-accent px-1.5 text-[11px] font-bold text-black tabular-nums">
-                {planCount}
-              </span>
-            </Link>
-            <Link
-              href="/my-plan"
-              aria-label={`Saved: ${savedCount} lifts`}
-              className="inline-flex items-center gap-2 rounded-full px-2.5 py-1 text-xs text-soft transition-colors hover:text-white"
-            >
-              Saved
-              <span className="grid h-5 min-w-5 place-items-center rounded-full border border-soft/40 px-1.5 text-[11px] font-semibold text-white tabular-nums">
-                {savedCount}
-              </span>
-            </Link>
+          <div className="flex items-center justify-end gap-5">
+            <Badge label="Plan" count={planCount} filled />
+            <Badge label="Saved" count={savedCount} />
           </div>
         </div>
-
-        {/* On small screens the links drop to their own row so they stay easy to tap. */}
         <div className="flex justify-center pb-3 md:hidden">
           <NavLinks pathname={pathname} />
         </div>
