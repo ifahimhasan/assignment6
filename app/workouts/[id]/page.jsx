@@ -46,10 +46,10 @@ export default async function WorkoutDetailPage({ params }) {
       </div>
 
       <div>
-        <h1 className="font-display text-3xl font-bold uppercase leading-tight tracking-wide text-white sm:text-4xl">
+        <h1 className="font-display text-[28px] font-bold uppercase leading-tight tracking-wide text-white sm:text-[30px]">
           {workout.name}
         </h1>
-        <p className="mt-2 max-w-[560px] text-[15px] leading-relaxed text-muted">{workout.description}</p>
+        <p className="mt-2 max-w-[640px] text-[15px] leading-relaxed text-muted sm:text-base">{workout.description}</p>
         <TagPills tags={workout.muscleGroups} uppercase={false} className="mt-4" />
 
         <dl className="mt-7 overflow-hidden rounded-xl border border-edge bg-panel-2">
