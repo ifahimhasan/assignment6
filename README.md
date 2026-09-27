@@ -21,7 +21,7 @@ FitLog is a workout library and daily planner built with the Next.js App Router.
 
 ## ✨ Key Features
 
-1. **Workout library** with a responsive 3 × 4 grid, category tags, equipment and a duration / calories / rating stats row for every lift, plus search by workout name or muscle group.
+1. **Workout library** loaded from the FitLog API on the server, with a responsive 3 × 4 grid, category tags, equipment and a duration / calories / rating stats row for every lift.
 2. **Detailed workout pages** with a key specs panel (equipment, difficulty, sets, reps, duration, calories, rating) and numbered instructions, served by dynamic routes (`/workouts/[id]`).
 3. **Today's Plan with a five-lift cap.** "Add to today's plan" updates the navbar badge, shows a toast and disables itself once five lifts are planned.
 4. **Save for later** list with its own navbar badge, tab and toast feedback.
