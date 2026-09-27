@@ -28,12 +28,12 @@ export function PlanProvider({ children }) {
   const [state, setState] = useState(EMPTY);
   const [hydrated, setHydrated] = useState(false);
 
-  // Load saved data once on the client.
+
   useEffect(() => {
     setState(readStorage());
     setHydrated(true);
 
-    // Keep several open tabs in sync.
+  
     const onStorage = (e) => {
       if (e.key === STORAGE_KEY) setState(readStorage());
     };
@@ -41,13 +41,13 @@ export function PlanProvider({ children }) {
     return () => window.removeEventListener("storage", onStorage);
   }, []);
 
-  // Persist every change after the first load.
+  
   useEffect(() => {
     if (!hydrated) return;
     try {
       window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     } catch {
-      // Storage can be unavailable (private mode); the app still works in memory.
+     
     }
   }, [state, hydrated]);
 
