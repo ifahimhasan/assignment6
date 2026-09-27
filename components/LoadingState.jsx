@@ -11,11 +11,11 @@ export function LoadingPulse({ label = "Loading workouts…" }) {
 
 export function CardSkeletonGrid({ count = 6 }) {
   return (
-    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3" aria-hidden="true">
+    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7" aria-hidden="true">
       {Array.from({ length: count }).map((_, i) => (
-        <div key={i} className="overflow-hidden rounded-xl border border-line bg-panel">
-          <div className="aspect-[16/10] animate-pulse bg-panel-2" />
-          <div className="space-y-3 p-4">
+        <div key={i} className="overflow-hidden rounded-xl bg-panel">
+          <div className="aspect-[2/1] animate-pulse bg-panel-2" />
+          <div className="space-y-3 px-6 pb-6 pt-5">
             <div className="flex gap-1.5">
               <div className="h-4 w-14 animate-pulse rounded-full bg-panel-2" />
               <div className="h-4 w-12 animate-pulse rounded-full bg-panel-2" />
@@ -27,5 +27,14 @@ export function CardSkeletonGrid({ count = 6 }) {
         </div>
       ))}
     </div>
+  );
+}
+
+export function LibraryLoading() {
+  return (
+    <>
+      <LoadingPulse />
+      <CardSkeletonGrid />
+    </>
   );
 }

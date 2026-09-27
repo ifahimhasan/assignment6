@@ -5,8 +5,8 @@ export default function TagPills({ tags = [], uppercase = true, className = "" }
       {tags.map((tag) => (
         <li
           key={tag}
-          className={`rounded-full bg-accent px-2.5 py-0.5 text-[10px] font-bold text-black ${
-            uppercase ? "uppercase tracking-wide" : "text-xs font-semibold"
+          className={`rounded-full bg-accent font-bold text-black ${
+            uppercase ? "px-2.5 py-[3px] text-[9px] uppercase tracking-wider" : "px-3 py-1 text-[11px]"
           }`}
         >
           {tag}
