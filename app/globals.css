@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Colours sampled from the FitLog Figma file */
+
 @theme {
   --color-ink: #101115;        /* page background */
   --color-ink-deep: #0a0b0e;   /* footer */
@@ -31,7 +31,7 @@
   }
 }
 
-/* Page container: near full width like the Figma frames */
+
 @utility shell {
   width: 100%;
   max-width: 1440px;
