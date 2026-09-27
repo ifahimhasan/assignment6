@@ -1,7 +1,7 @@
 import Link from "next/link";
 import DumbbellIcon from "./DumbbellIcon";
 
-// Navbar: diagonal dumbbell. Footer: horizontal dumbbell (as in the Figma file).
+
 export default function Logo({ variant = "nav" }) {
   const footer = variant === "footer";
   return (
