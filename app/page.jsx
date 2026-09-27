@@ -13,7 +13,7 @@ export default function HomePage() {
         </h2>
         <p className="mt-2 text-[13px] text-muted">Twelve lifts covering every major muscle group.</p>
         <div className="mt-8">
-          {/* Shows the loading animation while the API request is in flight */}
+          
           <Suspense fallback={<LibraryLoading />}>
             <Library />
           </Suspense>
