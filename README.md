@@ -4,7 +4,7 @@
 
 **A dark, no-nonsense gym companion.** Pick a lift, lock it into today's plan, and watch the week's work add up.
 
-[Live Demo](https://your-live-link.vercel.app) · [Report a Bug](https://github.com/your-username/fitlog/issues)
+[Live Link](https://fitlogph.netlify.app/) · [Report a Bug](https://github.com/ifahimhasan/fitlog/issues)
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs&logoColor=white)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
@@ -87,7 +87,7 @@ npm start
 
 ## ☁️ Deployment
 
-Deployed on **Vercel**: import the repository, keep the default Next.js settings and deploy. Because every route is handled by Next.js, reloading any page (including `/my-plan` and `/workouts/3`) works without errors.
+Deployed on **Netlify**: import the repository, keep the default Next.js settings and deploy. Because every route is handled by Next.js, reloading any page (including `/my-plan` and `/workouts/3`) works without errors.
 
 ## 📄 License
 
