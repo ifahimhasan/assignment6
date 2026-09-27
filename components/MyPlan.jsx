@@ -43,7 +43,7 @@ function EmptyState() {
   );
 }
 
-// `workouts` comes from the FitLog API (fetched on the server in app/my-plan/page.jsx).
+
 export default function MyPlan({ workouts = [], loading = false, error = null }) {
   const { hydrated, planIds, savedIds, isDone, markDone, removeFromPlan, removeFromSaved } = usePlan();
   const [tab, setTab] = useState("plan");
