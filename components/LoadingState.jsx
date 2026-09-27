@@ -1,9 +1,9 @@
-import { Dumbbell } from "lucide-react";
+import DumbbellIcon from "./DumbbellIcon";
 
 export function LoadingPulse({ label = "Loading workouts…" }) {
   return (
     <div role="status" aria-live="polite" className="flex flex-col items-center justify-center gap-4 py-10">
-      <Dumbbell className="size-9 animate-lift text-accent" strokeWidth={2.25} aria-hidden="true" />
+      <DumbbellIcon className="size-10 animate-lift text-accent" />
       <p className="text-sm text-soft">{label}</p>
     </div>
   );
