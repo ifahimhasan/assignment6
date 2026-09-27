@@ -23,7 +23,7 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Replace /public/hero.png with the image exported from Figma for a sharper result. */}
+        
         <div className="relative mx-auto h-[240px] w-full max-w-[220px] sm:h-[300px] sm:max-w-[260px] lg:h-[400px] lg:max-w-[340px]">
           <Image
             src="/hero.png"
