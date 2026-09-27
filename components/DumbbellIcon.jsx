@@ -1,4 +1,4 @@
-// FitLog logo mark: a flat dumbbell, drawn to match the Figma logo.
+
 export default function DumbbellIcon({ className = "", ...props }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true" {...props}>
