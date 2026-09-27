@@ -4,7 +4,7 @@
 
 **A dark, no-nonsense gym companion.** Pick a lift, lock it into today's plan, and watch the week's work add up.
 
-[Live Link](https://fitlogph.netlify.app/) · [Report a Bug](https://github.com/ifahimhasan/fitlog/issues)
+[Live Link](https://fitlogph.netlify.app/)
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs&logoColor=white)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
