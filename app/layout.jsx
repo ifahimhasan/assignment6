@@ -1,16 +1,9 @@
-import { Inter, Oswald } from "next/font/google";
+import "@fontsource-variable/inter";
+import "@fontsource-variable/oswald";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Providers from "@/components/Providers";
-
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
-const oswald = Oswald({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-oswald",
-  display: "swap",
-});
 
 export const metadata = {
   title: {
@@ -27,7 +20,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${oswald.variable}`}>
+    <html lang="en">
       <body className="flex min-h-dvh flex-col font-sans antialiased">
         <Providers>
           <Navbar />

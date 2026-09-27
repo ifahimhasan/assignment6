@@ -10,8 +10,8 @@
   --color-accent: #ccff00;
   --color-accent-deep: #1f2a0a;
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-oswald), "Arial Narrow", Impact, sans-serif;
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Oswald Variable", "Arial Narrow", Impact, sans-serif;
 
   --animate-lift: lift 1.1s ease-in-out infinite;
 
