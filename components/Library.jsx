@@ -1,7 +1,7 @@
 import WorkoutCard from "./WorkoutCard";
 import { fetchWorkouts } from "@/lib/api";
 
-// Server component: fetches every workout from the FitLog API.
+
 export default async function Library() {
   let workouts;
   try {
