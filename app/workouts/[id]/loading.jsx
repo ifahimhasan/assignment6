@@ -2,7 +2,7 @@ import { LoadingPulse } from "@/components/LoadingState";
 
 export default function LoadingWorkout() {
   return (
-    <div className="shell grid gap-8 pt-8 sm:pt-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1fr)] lg:gap-14" aria-busy="true">
+    <div className="shell grid gap-8 pt-8 sm:pt-12 lg:grid-cols-2 lg:gap-[60px]" aria-busy="true">
       <div className="aspect-[4/5] animate-pulse rounded-xl bg-panel" />
       <div>
         <LoadingPulse label="Loading workout…" />

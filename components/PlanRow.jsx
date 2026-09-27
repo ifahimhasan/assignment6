@@ -7,9 +7,9 @@ import WorkoutStats from "./WorkoutStats";
 
 export default function PlanRow({ workout, showDone, done, onDone, onRemove }) {
   return (
-    <li className="flex flex-col gap-4 rounded-xl bg-panel p-4 sm:flex-row sm:items-center sm:px-5">
+    <li className="flex flex-col gap-4 rounded-xl border border-edge bg-panel p-4 sm:flex-row sm:items-center sm:px-5 sm:py-5">
       <div className="flex min-w-0 flex-1 items-center gap-4 sm:gap-5">
-        <div className="relative h-[72px] w-[124px] shrink-0 overflow-hidden rounded-lg bg-panel-2 sm:h-[84px] sm:w-[150px]">
+        <div className="relative h-[72px] w-[124px] shrink-0 overflow-hidden rounded-lg bg-panel-2 sm:h-[86px] sm:w-[152px]">
           <Image src={workout.image} alt="" fill sizes="150px" className="object-cover" />
         </div>
         <div className="min-w-0">

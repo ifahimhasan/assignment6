@@ -18,7 +18,7 @@ function Metric({ label, value, highlight, first }) {
     <div className={first ? "" : "border-l border-line pl-4 sm:pl-8"}>
       <p className="text-xs text-muted">{label}</p>
       <p
-        className={`mt-2 font-display text-3xl font-bold leading-none tabular-nums sm:text-[40px] ${
+        className={`mt-3 font-display text-3xl font-bold leading-none tabular-nums sm:text-[40px] ${
           highlight ? "text-accent" : "text-white"
         }`}
       >
@@ -63,11 +63,11 @@ export default function MyPlan({ workouts = [], loading = false, error = null })
   const showLoading = loading || !hydrated;
 
   return (
-    <div className="shell pt-8 sm:pt-12">
+    <div className="shell pt-8 sm:pt-12 lg:px-[52px]">
       <h1 className="font-display text-3xl font-bold uppercase tracking-wide text-white sm:text-4xl">My Plan</h1>
       <p className="mt-1 text-[13px] text-muted">Cap of five lifts for today. Finish them, then load more.</p>
 
-      <div className="mt-7 grid grid-cols-3 rounded-xl bg-panel px-4 py-6 sm:px-7 sm:py-7">
+      <div className="mt-7 grid grid-cols-3 rounded-xl border border-edge bg-panel px-4 py-6 sm:px-7 sm:py-8">
         <Metric label="Exercises" value={metrics.exercises} highlight first />
         <Metric label="Minutes" value={metrics.minutes} />
         <Metric label="Calories" value={metrics.calories} />

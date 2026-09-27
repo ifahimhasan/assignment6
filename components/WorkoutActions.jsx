@@ -19,7 +19,7 @@ export default function WorkoutActions({ workout }) {
         type="button"
         onClick={() => addToPlan(workout)}
         disabled={inPlan || blocked}
-        className="inline-flex h-10 items-center justify-center gap-2 rounded-md bg-accent px-5 text-[13px] font-medium text-black transition hover:brightness-105 active:scale-[0.98] disabled:cursor-not-allowed disabled:bg-accent-deep disabled:text-accent disabled:ring-1 disabled:ring-accent/30 disabled:active:scale-100"
+        className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-accent px-7 text-sm font-medium text-black transition hover:brightness-105 active:scale-[0.98] disabled:cursor-not-allowed disabled:bg-accent-deep disabled:text-accent disabled:ring-1 disabled:ring-accent/30 disabled:active:scale-100"
       >
         {inPlan ? <Check className="size-4" aria-hidden="true" /> : <CalendarPlus className="size-4" aria-hidden="true" />}
         {addLabel}
@@ -29,7 +29,7 @@ export default function WorkoutActions({ workout }) {
         type="button"
         onClick={() => toggleSaved(workout)}
         aria-pressed={saved}
-        className={`inline-flex h-10 items-center justify-center gap-2 rounded-md border px-5 text-[13px] font-medium transition active:scale-[0.98] ${
+        className={`inline-flex h-11 items-center justify-center gap-2 rounded-md border px-7 text-sm font-medium transition active:scale-[0.98] ${
           saved ? "border-accent/50 text-accent" : "border-line-strong text-white hover:border-soft/50"
         }`}
       >

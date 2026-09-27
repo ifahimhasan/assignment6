@@ -57,9 +57,9 @@ export default function Navbar() {
   const { planCount, savedCount } = usePlan();
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-ink/90 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-edge bg-ink/90 backdrop-blur-md">
       <nav className="shell" aria-label="Main">
-        <div className="grid h-16 grid-cols-[1fr_auto] items-center gap-4 md:h-[72px] md:grid-cols-[1fr_auto_1fr]">
+        <div className="grid h-16 grid-cols-[1fr_auto] items-center gap-4 md:h-[76px] md:grid-cols-[1fr_auto_1fr]">
           <Logo />
           <div className="hidden md:block">
             <NavLinks pathname={pathname} />

@@ -33,7 +33,7 @@ export default async function WorkoutDetailPage({ params }) {
   ];
 
   return (
-    <article className="shell grid gap-8 pt-8 sm:pt-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1fr)] lg:gap-14">
+    <article className="shell grid gap-8 pt-8 sm:pt-12 lg:grid-cols-2 lg:gap-[60px]">
       <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-panel lg:self-start">
         <Image
           src={workout.image}
@@ -52,16 +52,16 @@ export default async function WorkoutDetailPage({ params }) {
         <p className="mt-2 max-w-[560px] text-[15px] leading-relaxed text-muted">{workout.description}</p>
         <TagPills tags={workout.muscleGroups} uppercase={false} className="mt-4" />
 
-        <dl className="mt-7 overflow-hidden rounded-xl bg-panel-2">
+        <dl className="mt-7 overflow-hidden rounded-xl border border-edge bg-panel-2">
           {specs.map(([label, value], i) => (
             <div
               key={label}
-              className={`flex min-h-12 items-center justify-between gap-4 px-5 sm:px-6 ${
+              className={`flex min-h-[52px] items-center justify-between gap-4 px-5 sm:px-6 ${
                 i < specs.length - 1 ? "border-b border-line" : ""
               }`}
             >
-              <dt className="text-[10px] font-bold uppercase tracking-[0.12em] text-muted">{label}</dt>
-              <dd className="text-right text-[13px] text-white">{value}</dd>
+              <dt className="text-[11px] font-bold uppercase tracking-[0.12em] text-muted">{label}</dt>
+              <dd className="text-right text-sm text-white">{value}</dd>
             </div>
           ))}
         </dl>
@@ -70,9 +70,9 @@ export default async function WorkoutDetailPage({ params }) {
           <h2 id="instructions-heading" className="text-sm font-bold uppercase tracking-wide text-white">
             Instructions
           </h2>
-          <ol className="mt-4 space-y-3">
+          <ol className="mt-4 space-y-4">
             {workout.instructions?.map((step, i) => (
-              <li key={i} className="flex gap-2 text-[13px] leading-relaxed text-soft">
+              <li key={i} className="flex gap-2 text-sm leading-relaxed text-soft">
                 <span className="w-4 shrink-0 tabular-nums">{i + 1}.</span>
                 <span>{step}</span>
               </li>

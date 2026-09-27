@@ -13,7 +13,7 @@ export function CardSkeletonGrid({ count = 6 }) {
   return (
     <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7" aria-hidden="true">
       {Array.from({ length: count }).map((_, i) => (
-        <div key={i} className="overflow-hidden rounded-xl bg-panel">
+        <div key={i} className="overflow-hidden rounded-xl border border-edge bg-panel">
           <div className="aspect-[2/1] animate-pulse bg-panel-2" />
           <div className="space-y-3 px-6 pb-6 pt-5">
             <div className="flex gap-1.5">
