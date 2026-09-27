@@ -19,7 +19,6 @@ export default function PlanRow({ workout, showDone, done, onDone, onRemove }) {
         <div className="min-w-0">
           <h3 className="truncate font-display text-base font-semibold uppercase tracking-wide text-white">
             {workout.name}
-            {done && <span className="ml-2 align-middle text-[10px] font-sans font-bold text-accent">DONE</span>}
           </h3>
           <p className="truncate text-xs text-muted">{workout.equipment}</p>
           <WorkoutStats workout={workout} accent className="mt-1.5" />

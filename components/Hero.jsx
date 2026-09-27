@@ -26,7 +26,7 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="relative mx-auto aspect-square w-full max-w-sm">
+        <div className="relative mx-auto aspect-square w-full max-w-[260px] sm:max-w-xs md:max-w-sm">
           <div
             className="absolute inset-6 rounded-full bg-accent/15 blur-3xl"
             aria-hidden="true"

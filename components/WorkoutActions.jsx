@@ -19,7 +19,7 @@ export default function WorkoutActions({ workout }) {
         type="button"
         onClick={() => addToPlan(workout)}
         disabled={inPlan || blocked}
-        className="inline-flex items-center justify-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-black transition hover:brightness-110 active:scale-[0.98] disabled:cursor-not-allowed disabled:bg-accent/30 disabled:text-black/70 disabled:active:scale-100"
+        className="inline-flex items-center justify-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-black transition hover:brightness-110 active:scale-[0.98] disabled:cursor-not-allowed disabled:bg-accent-deep disabled:text-accent disabled:ring-1 disabled:ring-accent/30 disabled:active:scale-100"
       >
         {inPlan ? <Check className="size-4" aria-hidden="true" /> : <CalendarPlus className="size-4" aria-hidden="true" />}
         {addLabel}
